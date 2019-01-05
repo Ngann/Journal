@@ -14,3 +14,8 @@ moved index.html from dist to src folder > add webpack plugin > npm install html
 
 
 npm install clean-webpack-plugin@0.1.18 --save-dev > we install this to tell clear out the dist folder since everytime we npm run install it created a index.html folder.
+
+
+ npm install uglifyjs-webpack-plugin@1.2.2 --save-dev > minify the code > bundle.js is suppose to be reduced to a single line > saw no changes.
+
+npm install webpack-dev-server@3.1.0 --save-dev >  and update webpack.config for new UglifyJsPlugin({ sourceMap: true }), and add dev tools > npm run build > now bundle.js is is smaller > dev-server is used to setup live development (localhost) > npm run start > to start localhost
