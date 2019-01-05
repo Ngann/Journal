@@ -1,4 +1,6 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 // all configuration are stored in module exports.
 module.exports = {
@@ -9,6 +11,14 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
+  plugins: [
+    new CleanWebpackPlugin(['dist']),
+    new HtmlWebpackPlugin({
+      title: 'journal',
+      template: './src/index.html',
+      inject: 'body'
+    })
+  ],
   module: {
     rules: [
       {

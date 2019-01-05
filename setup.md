@@ -9,3 +9,8 @@ npm run build > should not work
 
 npm install style-loader@0.20.2 css-loader@0.28.10 --save-dev  > add css to files
 npm run build > npm ERR! journal@1.0.0 build: `webpack`  > update build to "build": "webpack --mode development" > still doesn't work > we may need to update to lastest version of webpack > application still works without it. > fixed the issue, missed a comma
+
+moved index.html from dist to src folder > add webpack plugin > npm install html-webpack-plugin@3.0.6 --save-dev > update webpack.config.js > to include HtmlWebpackPlugin  > remove script tag at top of index.html > npm run bundle > this creates a new index.html file in the dist folder and creates the script at the bottom.
+
+
+npm install clean-webpack-plugin@0.1.18 --save-dev > we install this to tell clear out the dist folder since everytime we npm run install it created a index.html folder.
