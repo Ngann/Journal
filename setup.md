@@ -23,4 +23,5 @@ npm install webpack-dev-server@3.1.0 --save-dev >  and update webpack.config for
 
 npm install eslint@4.18.2 --save-dev
 npm install eslint-loader@2.0.0 --save-dev > add eslint to project to help check for errors > create .eslintrc file for configuration.
-npm run build > npm run lint
+npm run build
+npm run lint > will run ESLint for all JavaScript files in our src folder.
