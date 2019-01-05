@@ -19,3 +19,7 @@ npm install clean-webpack-plugin@0.1.18 --save-dev > we install this to tell cle
  npm install uglifyjs-webpack-plugin@1.2.2 --save-dev > minify the code > bundle.js is suppose to be reduced to a single line > saw no changes.
 
 npm install webpack-dev-server@3.1.0 --save-dev >  and update webpack.config for new UglifyJsPlugin({ sourceMap: true }), and add dev tools > npm run build > now bundle.js is is smaller > dev-server is used to setup live development (localhost) > npm run start > to start localhost
+
+
+npm install eslint@4.18.2 --save-dev
+npm install eslint-loader@2.0.0 --save-dev > add eslint to project to help check for errors
