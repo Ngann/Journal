@@ -8,3 +8,4 @@ src/main.js and src/journal.js folder and files, all JS source code will go insi
 npm run build > should not work
 
 npm install style-loader@0.20.2 css-loader@0.28.10 --save-dev  > add css to files
+npm run build > npm ERR! journal@1.0.0 build: `webpack`  > update build to "build": "webpack --mode development" > still doesn't work > we may need to update to lastest version of webpack > application still works without it. > fixed the issue, missed a comma
