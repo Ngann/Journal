@@ -2,6 +2,6 @@ export function Blog(){
   this.blogs =[];
 }
 
-Blog.prototype.addJournal = function (journal) {
-  this.order.push(journal);
+Blog.prototype.addPost = function (entry) {
+  this.blogs.push(entry);
 }

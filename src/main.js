@@ -1,5 +1,5 @@
-import { JournalEntry } from './journal';
-// import { Blog } from './blog';
+import { Entry } from './entry';
+import { Blog } from './blog';
 import './styles.css';
 
 $(document).ready(function() {
@@ -11,12 +11,17 @@ $(document).ready(function() {
     $("#post-title").text(title);
     $("#post-body").text(entry);
 
-    var testEntry = new JournalEntry( title, entry);
-    $('#post-blog').text(testEntry);
-    $('#journal-entry').hide();
+    var myBlog = new Blog();
+    var myEntry = new Entry( title, entry);
+    var count = myEntry.countWords();
+    myBlog.addPost(myEntry);
+    $('#post-blog').text(myEntry);
+    // $('#journal-entry').hide();
     $('#post').show();
     $('#blog').show();
-    console.log(testEntry);
+    console.log(myEntry);
+    console.log(myBlog);
+    console.log(count);
 
   });
 });
