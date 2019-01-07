@@ -15,6 +15,7 @@ $(document).ready(function() {
     var myEntry = new Entry( title, entry);
     var count = myEntry.countWords();
     var letter = myEntry.countLetters();
+    var vowel = myEntry.numberOfVowels();
     myBlog.addPost(myEntry);
     $('#post-blog').text(myEntry);
     // $('#journal-entry').hide();
@@ -24,6 +25,7 @@ $(document).ready(function() {
     console.log(myBlog);
     console.log(count);
     console.log(letter);
+    console.log(vowel);
 
   });
 });

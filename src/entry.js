@@ -13,15 +13,20 @@ Entry.prototype.countLetters = function(){
 }
 
 Entry.prototype.numberOfVowels = function(){
-  for (i = 0; i < this.entry.length(); i++)
-  {
-  if (this.entry.charAt(i) == 'a' || this.entry.charAt(i) == 'e' || this.entry.charAt(i) == 'i'
-          || this.entry.charAt(i) == 'o' || this.entry.charAt(i) == 'u')
-  }
+  var vowels = 'aeiouAEIOU';
+  var vcount = 0;
+   for (var x = 0; x < this.entry.length; x++)
+   {
+     if(vowels.indexOf(this.entry[x]) !== -1)
+     {
+       vcount +=1;
+     }
+   }
+   return vcount;
 }
-
+// 
 // Entry.prototype.countVowels = function({
-
+//
 //   var vowels = ['a','e','i','o','u']
 //   var entry = this.entry.count
 // }
