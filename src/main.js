@@ -14,6 +14,7 @@ $(document).ready(function() {
     var myBlog = new Blog();
     var myEntry = new Entry( title, entry);
     var count = myEntry.countWords();
+    var letter = myEntry.countLetters();
     myBlog.addPost(myEntry);
     $('#post-blog').text(myEntry);
     // $('#journal-entry').hide();
@@ -22,6 +23,7 @@ $(document).ready(function() {
     console.log(myEntry);
     console.log(myBlog);
     console.log(count);
+    console.log(letter);
 
   });
 });
