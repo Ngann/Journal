@@ -12,21 +12,27 @@ Entry.prototype.countLetters = function(){
   return this.entry.length;
 }
 
-Entry.prototype.numberOfVowels = function(){
-  var vowels = 'aeiouAEIOU';
+// Entry.prototype.numberOfVowels = function(){
+//   var vowels = 'aeiouAEIOU';
+//   var vcount = 0;
+//    for (var i = 0; i < this.entry.length; i++)
+//    {
+//      if(vowels.indexOf(this.entry[i]) !== -1)
+//      {
+//        vcount +=1;
+//      }
+//    }
+//    return vcount;
+// }
+
+Entry.prototype.countString = function(vowelOrConst){
   var vcount = 0;
-   for (var x = 0; x < this.entry.length; x++)
+   for (var i = 0; i < this.entry.length; i++)
    {
-     if(vowels.indexOf(this.entry[x]) !== -1)
+     if(vowelOrConst.indexOf(this.entry[i]) !== -1)
      {
        vcount +=1;
      }
    }
    return vcount;
 }
-// 
-// Entry.prototype.countVowels = function({
-//
-//   var vowels = ['a','e','i','o','u']
-//   var entry = this.entry.count
-// }

@@ -11,21 +11,25 @@ $(document).ready(function() {
     $("#post-title").text(title);
     $("#post-body").text(entry);
 
+    // var vowels = 'aeiouAEIOU';
+    var vowels = '^[aeyiuo]+$';
+    var consonants = 'bcdfghjklmnpqrstvwxyz';
     var myBlog = new Blog();
     var myEntry = new Entry( title, entry);
+    myBlog.addPost(myEntry);
     var count = myEntry.countWords();
     var letter = myEntry.countLetters();
-    var vowel = myEntry.numberOfVowels();
-    myBlog.addPost(myEntry);
+    var vowel = myEntry.countString(vowels);
+    var consonant = myEntry.countString(consonants);
     $('#post-blog').text(myEntry);
     // $('#journal-entry').hide();
     $('#post').show();
     $('#blog').show();
     console.log(myEntry);
     console.log(myBlog);
-    console.log(count);
-    console.log(letter);
-    console.log(vowel);
-
+    console.log("words", count);
+    console.log("letters",letter);
+    console.log("vowels", vowel);
+    console.log("consonants", consonant);
   });
 });
