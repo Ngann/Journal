@@ -1,11 +1,14 @@
 import { Entry } from './entry';
 import { Blog } from './blog';
+import { grid } from './grid';
 import './styles.css';
 import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 $(document).ready(function() {
+  grid(document.body);
+  
   $('#journal-entry').submit(function(event){
     event.preventDefault();
     var title = $("input#title").val();

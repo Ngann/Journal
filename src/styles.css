@@ -9,3 +9,16 @@ body {
 #blog {
   display: none;
 }
+
+.row {
+  height:3em;
+  line-height:3em;
+}
+
+.box {
+  display:inline-block;
+  width:3em;
+  height:3em;
+  box-sizing:border-box;
+  border:1px solid red;
+}
