@@ -1,6 +1,7 @@
 import { Entry } from './entry';
 import { Blog } from './blog';
 import './styles.css';
+import $ from 'jquery';
 
 $(document).ready(function() {
   $('#journal-entry').submit(function(event){
@@ -12,8 +13,9 @@ $(document).ready(function() {
     $("#post-body").text(entry);
 
     // var vowels = 'aeiouAEIOU';
-    var vowels = '^[aeyiuo]+$';
+    var vowels = '[aeiouAEIOU]';
     var consonants = 'bcdfghjklmnpqrstvwxyz';
+    // var consonants = '[a-z-[aeiuo]]';
     var myBlog = new Blog();
     var myEntry = new Entry( title, entry);
     myBlog.addPost(myEntry);
