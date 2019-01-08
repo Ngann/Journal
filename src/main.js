@@ -2,6 +2,7 @@ import { Entry } from './entry';
 import { Blog } from './blog';
 import './styles.css';
 import $ from 'jquery';
+import $ from 'bootstrap';
 
 $(document).ready(function() {
   $('#journal-entry').submit(function(event){
