@@ -20,7 +20,7 @@ body {
   width:3em;
   height:3em;
   box-sizing:border-box;
-  border:1px solid red;
+  /* border:1px solid red; */
 }
 
 .input {

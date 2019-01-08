@@ -19,6 +19,8 @@ export function grid(el) {
               var input = document.createElement("input");
               input.className = "input";
               input.type = "number";
+              input.min = "1"
+              input.max = "9"
               box.appendChild(input);
             }
         }
